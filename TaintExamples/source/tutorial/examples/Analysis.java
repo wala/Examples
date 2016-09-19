@@ -84,7 +84,7 @@ public class Analysis {
 		}
 	};
 	
-	public static Set<List<Statement>> getPaths(SDG<InstanceKey> G, EndpointFinder sources, EndpointFinder sinks) {
+	public static Set<List<Statement>> getPaths(SDG<? extends InstanceKey> G, EndpointFinder sources, EndpointFinder sinks) {
 		Set<List<Statement>> result = HashSetFactory.make();
 		for(Statement src : G) {
 			if (sources.endpoint(src)) {
