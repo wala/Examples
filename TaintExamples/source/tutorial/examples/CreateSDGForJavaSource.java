@@ -15,7 +15,6 @@ import com.ibm.wala.cast.ir.ssa.AstIRFactory;
 import com.ibm.wala.cast.java.client.impl.ZeroCFABuilderFactory;
 import com.ibm.wala.cast.java.ipa.callgraph.JavaSourceAnalysisScope;
 import com.ibm.wala.cast.java.ipa.modref.AstJavaModRef;
-import com.ibm.wala.cast.java.translator.jdt.ejc.ECJClassLoaderFactory;
 import com.ibm.wala.classLoader.SourceDirectoryTreeModule;
 import com.ibm.wala.dalvik.test.callGraph.DalvikCallGraphTestBase;
 import com.ibm.wala.ipa.callgraph.AnalysisCache;
@@ -72,7 +71,7 @@ public class CreateSDGForJavaSource {
     scope.addToScope(JavaSourceAnalysisScope.SOURCE, new SourceDirectoryTreeModule(new File(sourceDir)));
     
     // build the class hierarchy
-    IClassHierarchy cha = ClassHierarchy.make(scope, new ECJClassLoaderFactory(scope.getExclusions()));
+    IClassHierarchy cha = ClassHierarchy.make(scope, new com.ibm.wala.cast.java.translator.jdt.ecj.ECJClassLoaderFactory(scope.getExclusions()));
     System.out.println(cha.getNumberOfClasses() + " classes");
     System.out.println(Warnings.asString());
     Warnings.clear();
