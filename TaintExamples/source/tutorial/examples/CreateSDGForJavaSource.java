@@ -27,8 +27,8 @@ import com.ibm.wala.ipa.callgraph.CallGraphBuilderCancelException;
 import com.ibm.wala.ipa.callgraph.Entrypoint;
 import com.ibm.wala.ipa.callgraph.propagation.InstanceKey;
 import com.ibm.wala.ipa.callgraph.propagation.PointerAnalysis;
-import com.ibm.wala.ipa.cha.ClassHierarchy;
 import com.ibm.wala.ipa.cha.ClassHierarchyException;
+import com.ibm.wala.ipa.cha.ClassHierarchyFactory;
 import com.ibm.wala.ipa.cha.IClassHierarchy;
 import com.ibm.wala.ipa.slicer.SDG;
 import com.ibm.wala.ipa.slicer.Slicer.ControlDependenceOptions;
@@ -71,7 +71,7 @@ public class CreateSDGForJavaSource {
     scope.addToScope(JavaSourceAnalysisScope.SOURCE, new SourceDirectoryTreeModule(new File(sourceDir)));
     
     // build the class hierarchy
-    IClassHierarchy cha = ClassHierarchy.make(scope, new com.ibm.wala.cast.java.translator.jdt.ecj.ECJClassLoaderFactory(scope.getExclusions()));
+    IClassHierarchy cha = ClassHierarchyFactory.make(scope, new com.ibm.wala.cast.java.translator.jdt.ecj.ECJClassLoaderFactory(scope.getExclusions()));
     System.out.println(cha.getNumberOfClasses() + " classes");
     System.out.println(Warnings.asString());
     Warnings.clear();

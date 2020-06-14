@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>WALA Demo SOAP 2020</title>
+</head>
+<script> 
+var id = function _id(x) { return x; }; 
+function Id() { this.id = id; }
+function SubId() { }; SubId.prototype = new Id(); 
+</script>
+
+<body>
+<h1>Demo Script</h1>
+<script> 
+if (Math.random.call(null) > 0) {
+    var id1 = new Id();
+    var text = id1.id.call(document, document.URL);
+} else {
+    var id2 = new SubId();
+    var text = id2.id("not a url");
+}
+document.write(text);
+</script>
+
+<hr>
+<address>dolby@us.ibm.com</address>
+<!-- hhmts start -->Last modified: Sat May 30 19:41:44 EDT 2020 <!-- hhmts end -->
+</body> 
+</html>
