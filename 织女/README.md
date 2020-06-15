@@ -18,11 +18,11 @@ While 织女 itself is straightforward to build, it has several dependencies tha
 7. [MagpieBridge](https://github.com/MagpieBridge/MagpieBridge) can be built using `mvn clean install`.  Note that, for now, 织女 needs to use the 'ibm' branch of MagpieBridge, but we anticipate that changing soon.
 8. Build 织女 with `mvn clean install` in its top-level directory.
 
-#### VSCode extnsion
+#### VSCode extension
 
 1. make sure you have yarn on your system
 
-2. in the vscode/extension, run `yarn compile`.
+2. in the `vscode/extension` directory, run `yarn compile`.
 
 3. make sure `vscode/extension/resources` exists, and copy `zhinu-0.0.1-SNAPSHOT-织女.jar` from `target` to it.
 
