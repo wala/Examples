@@ -4,3 +4,10 @@
 1. 织女 uses the cross-language nature of WALA to weave together a single taint analysis for four different languages based on the Common AST (CAst) and components from the WALA core.
 2. In legend, 织女 the goddess was one of those who used the 鹊桥 (Magpie Bridge), and 织女 the taint analysis uses [MagpieBridge](https://github.com/MagpieBridge/MagpieBridge).
 
+### Building
+
+While 织女 itself is straightforward to build, it has several dependencies that need to be built first:
+1. The Python components depend on Jython3.  That can be tedious to build, so we provide [a pre-built Maven jar](https:maven/org.python.jython3.tar.bz2); simply unpack that jar in your Maven repository dirctory.
+2. [WALA](https://github.com/wala/WALA) has extensive build help on the site.  Since 织女 is built with Maven, you should build WALA with `gradlew build publishToMavenLocal`.
+3. [MagpieBridge](https://github.com/MagpieBridge/MagpieBridge) can be built using `mvn clean install`.  Note that, for now, 织女 needs to use the 'ibm' branch of MagpieBridge, but we anticipate that changing soon.
+4. Build 织女 with `mvn clean install` in its top-level directory.
