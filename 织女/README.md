@@ -6,10 +6,10 @@
 
 ### Building
 
-[织女](https:doc/README-building-织女.md) 
+[织女](https://github.com/wala/Examples/blob/master/织女/doc/README-building-织女.md) 
 
-[VSCode extension](https:doc/README-building-vscode.md) 
+[VSCode extension](https://github.com/wala/Examples/blob/master/织女/doc/README-building-vscode.md) 
 
 ### Testing
 
-[Running 织女 on the command line](https:doc/README-cmdline.md)
+[Running 织女 on the command line](https:https://github.com/wala/Examples/blob/master/织女/doc/README-cmdline.md)
