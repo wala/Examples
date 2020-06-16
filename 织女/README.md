@@ -12,4 +12,4 @@
 
 ### Testing
 
-[Running 织女 on the command line](https:https://github.com/wala/Examples/blob/master/织女/doc/README-cmdline.md)
+[Running 织女 on the command line](https://github.com/wala/Examples/blob/master/织女/doc/README-cmdline.md)
