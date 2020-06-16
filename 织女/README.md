@@ -10,3 +10,6 @@
 
 [VSCode extension](https:doc/README-building-vscode.md) 
 
+### Testing
+
+[Running 织女 on the command line](https:doc/README-cmdline.md)
