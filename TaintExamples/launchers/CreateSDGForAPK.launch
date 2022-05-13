@@ -8,8 +8,10 @@
 </listAttribute>
 <stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="/tmp/dexcg-accuweather.out"/>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="tutorial.examples.CreateSDGForAPK"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="/Users/dolby/git/DroidBench/apk/GeneralJava/VirtualDispatch2.apk 600000"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="TaintExamples"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xmx4096M -ea -agentlib:hprof=cpu=samples,format=a,file=/tmp/dexcg.hprof.out"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xmx4096M -ea"/>
 </launchConfiguration>

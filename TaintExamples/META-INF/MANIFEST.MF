@@ -5,16 +5,19 @@ Bundle-SymbolicName: TaintExamples
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: tutorial.examples.Activator
 Require-Bundle: org.eclipse.core.runtime,
- com.ibm.wala.dalvik.test;bundle-version="1.3.10",
- com.ibm.wala.dalvik;bundle-version="1.3.10",
- com.ibm.wala.core;bundle-version="1.3.10",
- com.ibm.wala.core.tests;bundle-version="1.3.10",
+ com.ibm.wala.dalvik.test,
+ com.ibm.wala.dalvik,
+ com.ibm.wala.core,
+ com.ibm.wala.core.tests,
  com.ibm.wala.cast.js.rhino.test,
  com.ibm.wala.cast.js,
- com.ibm.wala.cast.js.rhino;bundle-version="1.3.10",
+ com.ibm.wala.cast.js.rhino,
  com.ibm.wala.cast,
- com.ibm.wala.cast.java;bundle-version="1.3.10",
- com.ibm.wala.cast.java.ecj;bundle-version="1.3.10"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+ com.ibm.wala.cast.java,
+ com.ibm.wala.cast.java.ecj,
+ kr.ac.kaist.wala.hybridroid.test;bundle-version="0.0.1",
+ kr.ac.kaist.wala.hybridroid;bundle-version="0.0.1",
+ com.ibm.wala.shrike
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
 Export-Package: tutorial.examples

@@ -8,7 +8,11 @@
 </listAttribute>
 <stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="/tmp/srcsdg"/>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 8 [1.8.0_101]"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="tutorial.examples.CreateSDGForJavaSource"/>
+<stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="TaintExamples"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="TaintExamples"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-DsourceDir=/Users/dolby/git/DroidBench/eclipse-project/GeneralJava/VirtualDispatch2/src/"/>
 </launchConfiguration>

@@ -8,8 +8,10 @@
 </listAttribute>
 <stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="/tmp/htmlsdg"/>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="tutorial.examples.CreateSDGForJavaScript"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="file:///Users/dolby/AppScanResearchWorkspace/com.ibm.wala.andromeda.js.tests/microbenchmarks/Basic/func_wrapper_01.html"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="TaintExamples"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
 <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:com.ibm.wala.cast.js.test.data}/examples-src"/>
 </launchConfiguration>

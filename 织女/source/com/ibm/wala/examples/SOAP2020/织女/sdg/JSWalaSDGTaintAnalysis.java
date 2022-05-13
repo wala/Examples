@@ -1,15 +1,12 @@
-package com.ibm.wala.examples.SOAP2020.织女;
+package com.ibm.wala.examples.SOAP2020.织女.sdg;
 
 import java.util.Collection;
 
-import com.ibm.wala.cast.ir.ssa.AstIRFactory;
-import com.ibm.wala.cast.js.ipa.callgraph.JSCFABuilder;
+import com.ibm.wala.cast.ipa.callgraph.AstSSAPropagationCallGraphBuilder;
 import com.ibm.wala.cast.js.ipa.modref.JavaScriptModRef;
-import com.ibm.wala.cast.js.loader.JavaScriptLoaderFactory;
-import com.ibm.wala.cast.js.translator.CAstRhinoTranslatorFactory;
-import com.ibm.wala.cast.js.util.JSCallGraphBuilderUtil;
-import com.ibm.wala.cast.js.util.JSCallGraphBuilderUtil.CGBuilderType;
 import com.ibm.wala.classLoader.Module;
+import com.ibm.wala.examples.SOAP2020.织女.EndpointFinder;
+import com.ibm.wala.examples.SOAP2020.织女.JSWalaBuilder;
 import com.ibm.wala.ipa.callgraph.propagation.InstanceKey;
 import com.ibm.wala.ipa.modref.ModRef;
 import com.ibm.wala.ipa.slicer.NormalStatement;
@@ -19,25 +16,19 @@ import com.ibm.wala.ipa.slicer.Statement.Kind;
 import com.ibm.wala.ssa.SSAGetInstruction;
 import com.ibm.wala.ssa.SSAInstruction;
 import com.ibm.wala.util.WalaException;
-import com.ibm.wala.util.collections.HashSetFactory;
+import com.ibm.wala.util.intset.MutableMapping;
 
 import magpiebridge.core.AnalysisConsumer;
 
-public class JSWalaTaintAnalysis extends WalaTaintAnalysis {
+public class JSWalaSDGTaintAnalysis extends WalaSDGTaintAnalysis {
+
+	public JSWalaSDGTaintAnalysis(MutableMapping<String> uriCache) {
+		super(uriCache);
+	}
 
 	@Override
 	public String source() {
-		return "JSTaintDemo";
-	}
-
-	protected JSCFABuilder makeBuilder(Collection<? extends Module> files, AnalysisConsumer server) throws WalaException {
-		Collection<Module> m2 = HashSetFactory.make();
-		files.forEach((m) -> m2.add(m));
-		m2.add(JSCallGraphBuilderUtil.getPrologueFile("prologue.js"));
-		Module[] modules = m2.toArray(new Module[files.size()]);
-		JavaScriptLoaderFactory loaders = new JavaScriptLoaderFactory(new CAstRhinoTranslatorFactory());
-		JSCFABuilder builder = JSCallGraphBuilderUtil.makeCGBuilder(loaders, modules, CGBuilderType.ONE_CFA, AstIRFactory.makeDefaultFactory());
-		return builder;
+		return "JSWalaSDGTaintDemo";
 	}
 
 	@Override
@@ -74,6 +65,12 @@ public class JSWalaTaintAnalysis extends WalaTaintAnalysis {
 	@Override
 	protected ModRef<InstanceKey> modRef() {
 		return new JavaScriptModRef<>();
+	}
+
+	@Override
+	public AstSSAPropagationCallGraphBuilder makeBuilder(Collection<? extends Module> files, AnalysisConsumer server)
+			throws WalaException {
+		return JSWalaBuilder.makeBuilder(files, server);
 	}
 
 }

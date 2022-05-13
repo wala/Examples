@@ -1,8 +1,8 @@
-{
+  {
     "name": "zhinu-magpie-che",
     "description": "织女 for vscode",
     "author": "Julian Dolby",
-    "license": "EPL",
+    "license": "EPL-2.0",
     "version": "0.0.1",
     "publisher": "someone",
     "repository": {

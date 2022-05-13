@@ -16,7 +16,7 @@ import com.ibm.wala.classLoader.IMethod.SourcePosition;
 import com.ibm.wala.ipa.slicer.NormalStatement;
 import com.ibm.wala.ipa.slicer.ParamCaller;
 import com.ibm.wala.ipa.slicer.Statement;
-import com.ibm.wala.shrikeCT.InvalidClassFileException;
+import com.ibm.wala.shrike.shrikeCT.InvalidClassFileException;
 
 public class Print {
 
@@ -29,6 +29,7 @@ public class Print {
 		}
 	}
 
+	@SuppressWarnings("incomplete-switch")
 	public static Position getPosition(Statement s) {
 		Position p = null;
 		IMethod m = s.getNode().getMethod();
@@ -43,13 +44,21 @@ public class Print {
 			}
 		} 
 
+		/*
 		if (p != null) {
 			Position mp = ((AstMethod)m).debugInfo().getCodeBodyPosition();
 			if (p.compareTo(mp) == 0) {
 				return null;
 			}
 		}
+		*/
 		
+		p = fixIncludedURL(p);
+		
+		return p;
+	}
+
+	public static Position fixIncludedURL(Position p) {
 		if (p instanceof IncludedPosition) {
 			if (p.getURL().toString().matches(".*#[0-9]+$")) {
 				class FlatPos extends AbstractSourcePosition {
@@ -105,7 +114,6 @@ public class Print {
 				p = new FlatPos(p);
 			}
 		}
-		
 		return p;
 	}
 	

@@ -22,42 +22,42 @@
     <dependency>
       <groupId>com.ibm.wala</groupId>
       <artifactId>com.ibm.wala.util</artifactId>
-      <version>1.5.6-SNAPSHOT</version>
+      <version>1.5.8-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.ibm.wala</groupId>
       <artifactId>com.ibm.wala.shrike</artifactId>
-      <version>1.5.6-SNAPSHOT</version>
+      <version>1.5.8-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.ibm.wala</groupId>
       <artifactId>com.ibm.wala.core</artifactId>
-      <version>1.5.6-SNAPSHOT</version>
+      <version>1.5.8-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.ibm.wala</groupId>
       <artifactId>com.ibm.wala.cast</artifactId>
-      <version>1.5.6-SNAPSHOT</version>
+      <version>1.5.8-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.ibm.wala</groupId>
       <artifactId>com.ibm.wala.cast.java</artifactId>
-      <version>1.5.6-SNAPSHOT</version>
+      <version>1.5.8-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.ibm.wala</groupId>
       <artifactId>com.ibm.wala.cast.java.ecj</artifactId>
-      <version>1.5.6-SNAPSHOT</version>
+      <version>1.5.8-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.ibm.wala</groupId>
       <artifactId>com.ibm.wala.cast.js</artifactId>
-      <version>1.5.6-SNAPSHOT</version>
+      <version>1.5.8-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.ibm.wala</groupId>
       <artifactId>com.ibm.wala.cast.js.rhino</artifactId>
-      <version>1.5.6-SNAPSHOT</version>
+      <version>1.5.8-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.mozilla</groupId>
@@ -72,7 +72,7 @@
     <dependency>
       <groupId>com.ibm.wala</groupId>
       <artifactId>com.ibm.wala.dalvik</artifactId>
-      <version>1.5.6-SNAPSHOT</version>
+      <version>1.5.8-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.eclipse.lsp4j</groupId>
@@ -82,12 +82,8 @@
     <dependency>
       <groupId>magpiebridge</groupId>
       <artifactId>magpiebridge</artifactId>
-      <version>0.0.3-SNAPSHOT</version>
+      <version>0.0.8</version>
       <exclusions>
-	<exclusion>
-	  <groupId>org.springframework</groupId>
-	  <artifactId>spring-core</artifactId>
-	</exclusion>
        <exclusion>
         <groupId>de.upb</groupId>
         <artifactId>Soot</artifactId>
@@ -98,6 +94,11 @@
   
   <build>
     <sourceDirectory>source</sourceDirectory>
+    <resources>
+      <resource>
+	<directory>resources</directory>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
